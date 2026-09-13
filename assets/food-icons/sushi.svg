@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Salmon sushi</title><desc id="desc">Salmon nigiri and sushi rolls arranged on a dark plate.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#c5d7cc"/><stop offset="1" stop-color="#90ad9e"/></linearGradient><filter id="s"><feDropShadow dy="12" stdDeviation="12" flood-opacity=".2"/></filter></defs>
+  <rect width="640" height="480" fill="url(#bg)"/><path d="M30 124c81-52 120-50 170-92" fill="none" stroke="#fff" stroke-width="10" opacity=".18"/><circle cx="560" cy="70" r="46" fill="#fff" opacity=".2"/>
+  <ellipse cx="320" cy="270" rx="237" ry="148" fill="#33453f" filter="url(#s)"/><ellipse cx="320" cy="253" rx="203" ry="116" fill="#f8eee0"/>
+  <g transform="translate(143 170)"><rect width="118" height="77" rx="32" fill="#f9f3e7"/><path d="M9 9c34-20 71-20 100 0l-8 35c-31-15-61-15-92 0Z" fill="#ed8068"/><path d="M34 8l-12 34M67 2 53 43M97 7 83 44" stroke="#ffd0bd" stroke-width="7"/></g>
+  <g transform="translate(377 166)"><rect width="118" height="77" rx="32" fill="#f9f3e7"/><path d="M9 9c34-20 71-20 100 0l-8 35c-31-15-61-15-92 0Z" fill="#ed8068"/><path d="M34 8l-12 34M67 2 53 43M97 7 83 44" stroke="#ffd0bd" stroke-width="7"/></g>
+  <g transform="translate(184 279)"><circle r="46" fill="#263b34"/><circle r="32" fill="#faf4e8"/><circle r="16" fill="#ed8068"/><path d="M-4-16 14 0-5 16-18 0Z" fill="#87a85c"/></g><g transform="translate(320 306)"><circle r="46" fill="#263b34"/><circle r="32" fill="#faf4e8"/><circle r="16" fill="#e9af53"/><path d="M-13-9 14-13 8 14-16 11Z" fill="#7ba65c"/></g><g transform="translate(455 280)"><circle r="46" fill="#263b34"/><circle r="32" fill="#faf4e8"/><circle r="16" fill="#ed8068"/><path d="M-13-10 11-14 16 10-9 16Z" fill="#7ba65c"/></g>
+</svg>

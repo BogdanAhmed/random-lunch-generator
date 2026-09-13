@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Rainbow grain bowl</title><desc id="desc">A colorful bowl filled with grains, avocado, chickpeas, cabbage, and vegetables.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#d7dfbd"/><stop offset="1" stop-color="#a9c49d"/></linearGradient><filter id="s"><feDropShadow dy="12" stdDeviation="13" flood-color="#314e38" flood-opacity=".2"/></filter><clipPath id="b"><ellipse cx="320" cy="243" rx="205" ry="148"/></clipPath></defs>
+  <rect width="640" height="480" fill="url(#bg)"/><circle cx="72" cy="380" r="55" fill="#fff" opacity=".2"/><circle cx="570" cy="88" r="72" fill="#fff" opacity=".15"/>
+  <ellipse cx="320" cy="265" rx="224" ry="165" fill="#f9f4e7" filter="url(#s)"/><g clip-path="url(#b)"><path d="M104 98h236v310H104Z" fill="#e4ba69"/><path d="M335 90h220v180H335Z" fill="#b85674"/><path d="M317 245h250v180H317Z" fill="#e97650"/><path d="M85 293h248v130H85Z" fill="#79a85d"/></g>
+  <g fill="#f3df9c"><circle cx="202" cy="181" r="14"/><circle cx="247" cy="217" r="13"/><circle cx="171" cy="237" r="14"/><circle cx="272" cy="157" r="12"/></g><g fill="#7f345b"><path d="m382 134 23 63 24-68 20 70 29-59" fill="none" stroke="#7f345b" stroke-width="18"/></g>
+  <g fill="#f8aa49"><circle cx="407" cy="302" r="22"/><circle cx="458" cy="330" r="21"/><circle cx="380" cy="360" r="19"/></g><path d="M145 337c34-57 83-76 144-52-12 64-65 88-144 52Z" fill="#497d48"/><path d="M187 338c18-25 38-42 74-49" fill="none" stroke="#b9d57e" stroke-width="10" stroke-linecap="round"/>
+</svg>

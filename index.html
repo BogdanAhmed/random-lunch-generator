@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A cheerful random lunch generator for those indecisive midday moments."
+    />
+    <title>Lunch, Decided.</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="background-shape background-shape--one" aria-hidden="true"></div>
+    <div class="background-shape background-shape--two" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <section class="lunch-card" aria-labelledby="page-title">
+        <header class="intro">
+          <p class="eyebrow"><span aria-hidden="true">✦</span> Midday inspiration</p>
+          <h1 id="page-title">Lunch, decided.</h1>
+          <p class="intro__copy">One click. One delicious idea. Zero overthinking.</p>
+        </header>
+
+        <div class="result" aria-live="polite" aria-atomic="true">
+          <div class="image-frame">
+            <img
+              id="lunch-image"
+              src="assets/food-icons/pizza.svg"
+              alt="A freshly baked margherita pizza"
+              width="640"
+              height="480"
+            />
+          </div>
+
+          <div class="result__text">
+            <p class="result__label">Today's pick</p>
+            <h2 id="lunch-name">Margherita Pizza</h2>
+          </div>
+        </div>
+
+        <button id="generate-button" class="generate-button" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 11a8.1 8.1 0 0 0-15.5-2M4 4v5h5M4 13a8.1 8.1 0 0 0 15.5 2M20 20v-5h-5" />
+          </svg>
+          Pick another lunch
+        </button>
+
+        <p class="hint">Six tasty possibilities are waiting.</p>
+      </section>
+    </main>
+  </body>
+</html>

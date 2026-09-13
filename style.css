@@ -1,0 +1,259 @@
+:root {
+  color-scheme: light;
+  --ink: #26332b;
+  --muted: #657168;
+  --cream: #f7f3e8;
+  --card: rgba(255, 255, 255, 0.92);
+  --orange: #e6653d;
+  --orange-dark: #ca4c28;
+  --sage: #9db79f;
+  --line: #e8e5da;
+  --shadow: 0 24px 70px rgba(73, 70, 54, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow-x: hidden;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 12%, rgba(255, 255, 255, 0.9) 0 9%, transparent 27%),
+    linear-gradient(145deg, #f3ead9 0%, var(--cream) 46%, #eef2e7 100%);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+img {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.background-shape {
+  position: fixed;
+  z-index: -1;
+  border-radius: 999px;
+  filter: blur(2px);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.background-shape--one {
+  top: -8rem;
+  right: -6rem;
+  width: 25rem;
+  height: 25rem;
+  background: #f2c59f;
+}
+
+.background-shape--two {
+  bottom: -9rem;
+  left: -8rem;
+  width: 26rem;
+  height: 26rem;
+  background: #c9d9c4;
+}
+
+.app-shell {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.lunch-card {
+  width: min(100%, 33rem);
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 2rem;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.intro {
+  text-align: center;
+}
+
+.eyebrow,
+.result__label,
+.hint {
+  margin: 0;
+}
+
+.eyebrow {
+  color: var(--orange-dark);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow span {
+  margin-right: 0.2rem;
+}
+
+h1 {
+  margin: 0.45rem 0 0.4rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.35rem, 9vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+
+.intro__copy {
+  max-width: 27rem;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.result {
+  margin-top: 1.6rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  background: #fff;
+}
+
+.image-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #efe8d8;
+}
+
+.image-frame::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  content: "";
+  pointer-events: none;
+}
+
+#lunch-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#lunch-image.is-changing {
+  animation: reveal 360ms cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+
+.result__text {
+  padding: 1rem 1.25rem 1.1rem;
+  text-align: center;
+}
+
+.result__label {
+  color: var(--orange-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0.22rem 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 6vw, 2.15rem);
+  letter-spacing: -0.025em;
+}
+
+.generate-button {
+  display: flex;
+  width: 100%;
+  min-height: 3.55rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 1rem;
+  padding: 0.85rem 1.25rem;
+  border: 0;
+  border-radius: 1rem;
+  color: #fff;
+  background: var(--orange);
+  box-shadow: 0 10px 24px rgba(202, 76, 40, 0.23);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.generate-button svg {
+  width: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.1;
+}
+
+.generate-button:hover {
+  background: var(--orange-dark);
+  box-shadow: 0 12px 28px rgba(202, 76, 40, 0.3);
+  transform: translateY(-2px);
+}
+
+.generate-button:active {
+  transform: translateY(0);
+}
+
+.generate-button:focus-visible {
+  outline: 3px solid rgba(230, 101, 61, 0.35);
+  outline-offset: 3px;
+}
+
+.hint {
+  padding-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0.25;
+    transform: scale(1.035);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 420px) {
+  .app-shell {
+    padding: 0.75rem;
+  }
+
+  .lunch-card {
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .result {
+    border-radius: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
