@@ -6,8 +6,9 @@ Tired of deciding what to eat for lunch? This small web app makes the choice for
 
 - **Randomized selection:** Each result is selected with JavaScript's `Math.random()`.
 - **Correct visual pairing:** Every lunch name and image live together in the same data object.
-- **Reliable local images:** Six custom SVG illustrations are included in the repository, with an in-app fallback if an asset cannot load.
-- **Generate again:** The button can be clicked as often as needed.
+- **Reliable local images:** Nine custom SVG illustrations are included in the repository, with an in-app fallback if an asset cannot load.
+- **Thoughtful reveal:** Each new pick shows a short `Thinking…` pause with a spinning wheel of dots.
+- **Generate again:** The button can be clicked as often as needed, and the same lunch will not appear twice in a row.
 - **Responsive and accessible:** The layout works on desktop and mobile, with semantic markup, useful alternative text, keyboard focus styles, and reduced-motion support.
 
 ## 🚀 Live Demo
@@ -20,11 +21,12 @@ The application is published with GitHub Pages:
 
 The core logic is simple:
 
-1. `script.js` stores six lunch objects. Each object contains a name, local image path, and alternative text.
-2. When the page loads or the user selects **Pick another lunch**, `showRandomLunch()` runs.
-3. `Math.random()` creates a random value, which is converted into a valid array index with `Math.floor()`.
-4. The name, image source, alternative text, and matching index are updated together in the page.
-5. If a local image cannot load, the error handler displays a generated SVG fallback instead of a broken image.
+1. `script.js` stores nine lunch objects. Each object contains a name, local image path, and alternative text.
+2. A random lunch is shown immediately when the page loads.
+3. When the user selects **Pick another lunch**, the result enters an accessible busy state and displays `Thinking…` with a dot spinner for 800 milliseconds.
+4. `Math.random()` creates a random value, which is converted into a valid array index with `Math.floor()` while avoiding an immediate repeat.
+5. The name, image source, alternative text, and matching index are updated together in the page.
+6. If a local image cannot load, the error handler displays a generated SVG fallback instead of a broken image.
 
 ## 📁 Project Structure
 
@@ -34,7 +36,7 @@ random-lunch-generator/
 ├── style.css                 # Responsive layout and visual design
 ├── script.js                 # Lunch data and random selection logic
 ├── assets/
-│   └── food-icons/           # Six bundled SVG lunch illustrations
+│   └── food-icons/           # Nine bundled SVG lunch illustrations
 └── README.md                 # Project documentation
 ```
 
@@ -63,7 +65,7 @@ Then open `http://localhost:8000`.
 
 1. Open the application.
 2. A random lunch idea appears immediately.
-3. Select **Pick another lunch** whenever you want a new random suggestion.
+3. Select **Pick another lunch** and wait briefly while the next idea is chosen.
 4. Repeat until something sounds delicious.
 
 ## 🤝 Contributing

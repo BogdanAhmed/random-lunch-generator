@@ -29,16 +29,58 @@ const lunchOptions = Object.freeze([
     image: "assets/food-icons/pasta.svg",
     alt: "A bowl of creamy tomato pasta",
   },
+  {
+    name: "Miso Ramen",
+    image: "assets/food-icons/ramen.svg",
+    alt: "A bowl of miso ramen with egg, noodles, and vegetables",
+  },
+  {
+    name: "Avocado Toast",
+    image: "assets/food-icons/avocado-toast.svg",
+    alt: "Avocado toast topped with tomato and a poached egg",
+  },
+  {
+    name: "Falafel Wrap",
+    image: "assets/food-icons/falafel-wrap.svg",
+    alt: "A falafel wrap filled with vegetables and herbs",
+  },
 ]);
 
 const lunchImage = document.querySelector("#lunch-image");
 const lunchName = document.querySelector("#lunch-name");
 const generateButton = document.querySelector("#generate-button");
+const result = document.querySelector(".result");
+const thinkingState = document.querySelector("#thinking-state");
 
 let currentIndex = -1;
+let isThinking = false;
 
 function getRandomLunchIndex() {
-  return Math.floor(Math.random() * lunchOptions.length);
+  if (currentIndex === -1 || lunchOptions.length < 2) {
+    return Math.floor(Math.random() * lunchOptions.length);
+  }
+
+  const offset = 1 + Math.floor(Math.random() * (lunchOptions.length - 1));
+  return (currentIndex + offset) % lunchOptions.length;
+}
+
+function setThinkingState(shouldThink) {
+  isThinking = shouldThink;
+  generateButton.disabled = shouldThink;
+  result.setAttribute("aria-busy", String(shouldThink));
+  thinkingState.hidden = !shouldThink;
+}
+
+function chooseAnotherLunch() {
+  if (isThinking) {
+    return;
+  }
+
+  setThinkingState(true);
+  window.setTimeout(() => {
+    showRandomLunch();
+    setThinkingState(false);
+  }, 800);
 }
 
 function createFallbackImage(label) {
@@ -78,6 +120,6 @@ lunchImage.addEventListener("error", () => {
   lunchImage.src = createFallbackImage(lunch?.name ?? "Lunch idea");
 });
 
-generateButton.addEventListener("click", showRandomLunch);
+generateButton.addEventListener("click", chooseAnotherLunch);
 
 showRandomLunch();

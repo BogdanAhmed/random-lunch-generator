@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Falafel wrap</title><desc id="desc">A warm flatbread wrap filled with falafel, tomato, cucumber, and herbs.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#efd6a5"/><stop offset="1" stop-color="#d5ae70"/></linearGradient><filter id="s"><feDropShadow dy="13" stdDeviation="14" flood-color="#684d2d" flood-opacity=".22"/></filter><clipPath id="wrap"><path d="M193 106c83-31 178-31 255 7l-47 296H237Z"/></clipPath></defs>
+  <rect width="640" height="480" fill="url(#bg)"/><circle cx="86" cy="92" r="60" fill="#fff" opacity=".18"/><circle cx="564" cy="389" r="65" fill="#fff" opacity=".15"/>
+  <path d="M193 106c83-31 178-31 255 7l-47 296H237Z" fill="#f3d797" filter="url(#s)"/>
+  <g clip-path="url(#wrap)"><path d="M172 113c58 55 108 70 148 103 46-37 93-64 150-99l-4-65H176Z" fill="#f7e5b9"/><g fill="#86613a"><circle cx="248" cy="144" r="39"/><circle cx="337" cy="130" r="42"/><circle cx="411" cy="160" r="38"/></g><g fill="#568457"><path d="M181 196c73-43 115-24 141 27-61 32-109 24-141-27Z"/><path d="M325 212c42-54 100-47 141-3-40 46-92 47-141 3Z"/></g><g fill="#dc6548"><path d="m208 215 91-53 17 39-92 52Z"/><path d="m356 178 92 54-21 37-91-54Z"/></g><g fill="#b7d47c"><circle cx="258" cy="245" r="17"/><circle cx="383" cy="243" r="18"/><circle cx="319" cy="189" r="15"/></g></g>
+  <path d="M205 255c61 18 167 20 225-2l-29 156H237Z" fill="#e9c77f"/><path d="M246 292c42 13 106 14 145-1" fill="none" stroke="#d2aa63" stroke-width="10" stroke-linecap="round"/>
+</svg>

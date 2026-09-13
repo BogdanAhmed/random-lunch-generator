@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Avocado toast</title><desc id="desc">A slice of toast with avocado, tomato, and a poached egg.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#d9dfb7"/><stop offset="1" stop-color="#9fc29a"/></linearGradient><filter id="s"><feDropShadow dy="13" stdDeviation="14" flood-color="#35543a" flood-opacity=".23"/></filter></defs>
+  <rect width="640" height="480" fill="url(#bg)"/><circle cx="91" cy="390" r="64" fill="#fff" opacity=".17"/><circle cx="555" cy="84" r="60" fill="#fff" opacity=".15"/>
+  <ellipse cx="320" cy="268" rx="238" ry="153" fill="#f9f6eb" filter="url(#s)"/>
+  <path d="M202 143c-22 6-35 25-36 46l-14 179c-2 23 17 43 40 43h258c23 0 42-20 40-43l-15-179c-2-21-16-39-36-46-63-21-173-21-237 0Z" fill="#a76b39"/><path d="M215 163c-18 5-29 20-30 37l-12 156c-1 17 12 31 29 31h238c17 0 30-14 29-31l-13-156c-1-17-12-32-29-37-57-17-155-17-212 0Z" fill="#e2aa62"/>
+  <g fill="#75a84f"><ellipse cx="267" cy="278" rx="83" ry="48" transform="rotate(-25 267 278)"/><ellipse cx="369" cy="288" rx="91" ry="50" transform="rotate(18 369 288)"/><ellipse cx="324" cy="222" rx="80" ry="45"/></g><g fill="#a9ca67"><path d="M209 290c54-7 85-29 111-71" fill="none" stroke="#bedd7e" stroke-width="15" stroke-linecap="round"/><path d="M325 317c41-4 78-24 108-57" fill="none" stroke="#bedd7e" stroke-width="15" stroke-linecap="round"/></g>
+  <g fill="#db6047"><circle cx="238" cy="216" r="22"/><circle cx="414" cy="328" r="23"/><circle cx="407" cy="210" r="17"/></g><path d="M279 222c11-48 83-62 118-22 37 43 2 111-54 106-49-4-75-40-64-84Z" fill="#fff8dd"/><circle cx="341" cy="251" r="30" fill="#efaf3d"/><g fill="#4c594a"><circle cx="279" cy="197" r="4"/><circle cx="380" cy="318" r="4"/><circle cx="443" cy="257" r="4"/></g>
+</svg>

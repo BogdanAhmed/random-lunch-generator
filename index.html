@@ -23,7 +23,7 @@
           <p class="intro__copy">One click. One delicious idea. Zero overthinking.</p>
         </header>
 
-        <div class="result" aria-live="polite" aria-atomic="true">
+        <div class="result" aria-live="polite" aria-atomic="true" aria-busy="false">
           <div class="image-frame">
             <img
               id="lunch-image"
@@ -38,6 +38,14 @@
             <p class="result__label">Today's pick</p>
             <h2 id="lunch-name">Margherita Pizza</h2>
           </div>
+
+          <div id="thinking-state" class="thinking-state" hidden>
+            <span class="dot-wheel" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </span>
+            <span>Thinking…</span>
+          </div>
         </div>
 
         <button id="generate-button" class="generate-button" type="button">
@@ -47,7 +55,7 @@
           Pick another lunch
         </button>
 
-        <p class="hint">Six tasty possibilities are waiting.</p>
+        <p class="hint">Nine tasty possibilities are waiting.</p>
       </section>
     </main>
   </body>

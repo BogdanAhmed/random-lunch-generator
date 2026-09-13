@@ -116,6 +116,7 @@ h1 {
 }
 
 .result {
+  position: relative;
   margin-top: 1.6rem;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -169,6 +170,55 @@ h2 {
   letter-spacing: -0.025em;
 }
 
+.thinking-state {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.94);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  backdrop-filter: blur(5px);
+}
+
+.thinking-state[hidden] {
+  display: none;
+}
+
+.dot-wheel {
+  position: relative;
+  display: block;
+  width: 2.35rem;
+  height: 2.35rem;
+  animation: spin 850ms linear infinite;
+}
+
+.dot-wheel span {
+  position: absolute;
+  top: calc(50% - 0.19rem);
+  left: calc(50% - 0.19rem);
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.dot-wheel span:nth-child(1) { transform: rotate(0deg) translateY(-0.9rem); }
+.dot-wheel span:nth-child(2) { transform: rotate(45deg) translateY(-0.9rem); opacity: 0.88; }
+.dot-wheel span:nth-child(3) { transform: rotate(90deg) translateY(-0.9rem); opacity: 0.76; }
+.dot-wheel span:nth-child(4) { transform: rotate(135deg) translateY(-0.9rem); opacity: 0.64; }
+.dot-wheel span:nth-child(5) { transform: rotate(180deg) translateY(-0.9rem); opacity: 0.52; }
+.dot-wheel span:nth-child(6) { transform: rotate(225deg) translateY(-0.9rem); opacity: 0.4; }
+.dot-wheel span:nth-child(7) { transform: rotate(270deg) translateY(-0.9rem); opacity: 0.28; }
+.dot-wheel span:nth-child(8) { transform: rotate(315deg) translateY(-0.9rem); opacity: 0.18; }
+
 .generate-button {
   display: flex;
   width: 100%;
@@ -209,6 +259,13 @@ h2 {
   transform: translateY(0);
 }
 
+.generate-button:disabled {
+  background: #d98a70;
+  box-shadow: none;
+  cursor: wait;
+  transform: none;
+}
+
 .generate-button:focus-visible {
   outline: 3px solid rgba(230, 101, 61, 0.35);
   outline-offset: 3px;
@@ -229,6 +286,12 @@ h2 {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 
